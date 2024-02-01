@@ -1,0 +1,39 @@
+nav{
+    position: absolute;
+    width: 100%;
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0px;
+        .nav-middle{
+            .nav-list{
+                display: flex;
+                li{
+                    padding: 0 20px;
+                    a{
+                        text-decoration: none;
+                        color:$white;
+                    }
+                }
+            }
+        }
+        .nav-right{
+            .job-post,.favorites{
+                background-color: $white;
+                color: $blue2;
+                i{
+                    margin-right: 10px;
+                }
+                @include button1
+            }
+            .login{
+                background-color: transparent;
+                color: $white;
+                @include button1
+            }
+         
+        }
+        
+    }
+}
