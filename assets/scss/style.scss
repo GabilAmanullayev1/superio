@@ -1,5 +1,5 @@
-@import "reset.scss";
-@import "variables.scss";
-@import "mixin.scss";
-@import "nav.scss";
-@import "banner.scss";
+@import "./abstracts/reset";
+@import "./abstracts/mixin";
+@import "./abstracts/variables";
+@import "./layout/nav";
+@import "./layout/banner";

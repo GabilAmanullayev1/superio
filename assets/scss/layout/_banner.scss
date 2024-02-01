@@ -1,27 +1,129 @@
-#banner{
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-image: url("../images/bg-slider2.jpg");
-    .banner{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .banner-left{
-            display: flex;
-            flex-direction: column;
-            .banner-trending{
-                padding-top: 20px;
-                .popular-searches{
-                  display: flex;
-                  li{
-                    color: $white;
-                    a{
-                      @include link
-                    }
-                  }
-                    
-                }
-            }
-        }
+#banner {
+  padding-top: 150px;
+  padding-bottom: 100px;
+  background-image: url("../images/bg-slider2.jpg");
+  position: relative;
+
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: center;
+    .banner-right{
+      width: 100%;
+      img{
+        max-width: 90%;
+      }
     }
+    .banner-left {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+
+      .banner-text {
+        h2 {
+          font-size: 50px;
+          color: $white;
+          margin-bottom: 30px;
+        }
+
+        p {
+          color: $white;
+          margin-bottom: 35px;
+        }
+      }
+
+      .banner-filter {
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 10px 30px 10px;
+        border-radius: 20px;
+
+        .banner-search-container {
+          display: flex;
+          align-items: center;
+
+          #banner-search {
+            @include banner-padding;
+            border-right: 1px solid #e8e9eb;
+            font-size: 16px;
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          i {
+            color: $grey;
+            font-size: 20px
+          }
+        }
+
+        .banner-select-container {
+          display: flex;
+          align-items: center;
+
+          i {
+            color: $grey;
+            margin-left: 10px;
+            font-size: 20px
+          }
+
+          #banner-select {
+            margin-right: 10px;
+            color: $grey;
+            font-size: 16px;
+            @include banner-padding;
+
+            &:focus {
+              outline: none;
+            }
+            
+            option {
+              color: $grey;
+            }
+          }
+        }
+
+        #banner-btn {
+          @include banner-padding;
+          cursor: pointer;
+          background-color: $yellow;
+          border-radius: 10px;
+          color: white;
+          transition:  all 0.3s ease-out;
+          &:hover{
+            background-color: $white;
+            color: $yellow;
+            border: 1px solid $yellow;
+          }
+        }
+
+      }
+
+      .banner-trending {
+        padding-top: 20px;
+
+        .popular-searches {
+          display: flex;
+
+          li {
+            color: $white;
+
+            a {
+              @include link
+            }
+          }
+
+        }
+      }
+    }
+    .banner-left-bottom{
+      position: absolute;
+      bottom: 20px;
+      
+    }
+  }
 }

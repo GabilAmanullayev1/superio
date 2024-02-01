@@ -1,5 +1,6 @@
 nav{
     position: absolute;
+    z-index: 10;
     width: 100%;
     .navbar{
         display: flex;
@@ -30,9 +31,17 @@ nav{
             .login{
                 background-color: transparent;
                 color: $white;
-                @include button1
+                transition: all 0.3s ease-out;
+                @include button1;
+                &:hover{
+                    background-color:$white;
+                    color: $blue2;
+                }
             }
          
+        }
+        .nav-menu{
+            display: none;
         }
         
     }

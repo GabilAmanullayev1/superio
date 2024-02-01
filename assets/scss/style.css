@@ -14,6 +14,7 @@
 
 nav {
   position: absolute;
+  z-index: 10;
   width: 100%;
 }
 nav .navbar {
@@ -48,6 +49,7 @@ nav .navbar .nav-right .job-post i, nav .navbar .nav-right .favorites i {
 nav .navbar .nav-right .login {
   background-color: transparent;
   color: #ffffff;
+  transition: all 0.3s ease-out;
   padding: 5px 10px;
   border-radius: 10px;
   border: 1px solid white;
@@ -55,20 +57,106 @@ nav .navbar .nav-right .login {
   cursor: pointer;
   margin-left: 10px;
 }
+nav .navbar .nav-right .login:hover {
+  background-color: #ffffff;
+  color: #302ea7;
+}
+nav .navbar .nav-menu {
+  display: none;
+}
 
 #banner {
-  padding-top: 100px;
+  padding-top: 150px;
   padding-bottom: 100px;
   background-image: url("../images/bg-slider2.jpg");
+  position: relative;
 }
 #banner .banner {
   display: flex;
   justify-content: space-between;
+  gap: 50px;
   align-items: center;
+}
+#banner .banner .banner-right {
+  width: 100%;
+}
+#banner .banner .banner-right img {
+  max-width: 90%;
 }
 #banner .banner .banner-left {
   display: flex;
+  width: 100%;
   flex-direction: column;
+}
+#banner .banner .banner-left .banner-text h2 {
+  font-size: 50px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+#banner .banner .banner-left .banner-text p {
+  color: #ffffff;
+  margin-bottom: 35px;
+}
+#banner .banner .banner-left .banner-filter {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px 30px 10px;
+  border-radius: 20px;
+}
+#banner .banner .banner-left .banner-filter .banner-search-container {
+  display: flex;
+  align-items: center;
+}
+#banner .banner .banner-left .banner-filter .banner-search-container #banner-search {
+  border: none;
+  padding: 15px;
+  border-right: 1px solid #e8e9eb;
+  font-size: 16px;
+}
+#banner .banner .banner-left .banner-filter .banner-search-container #banner-search:focus {
+  outline: none;
+}
+#banner .banner .banner-left .banner-filter .banner-search-container i {
+  color: #696969;
+  font-size: 20px;
+}
+#banner .banner .banner-left .banner-filter .banner-select-container {
+  display: flex;
+  align-items: center;
+}
+#banner .banner .banner-left .banner-filter .banner-select-container i {
+  color: #696969;
+  margin-left: 10px;
+  font-size: 20px;
+}
+#banner .banner .banner-left .banner-filter .banner-select-container #banner-select {
+  margin-right: 10px;
+  color: #696969;
+  font-size: 16px;
+  border: none;
+  padding: 15px;
+}
+#banner .banner .banner-left .banner-filter .banner-select-container #banner-select:focus {
+  outline: none;
+}
+#banner .banner .banner-left .banner-filter .banner-select-container #banner-select option {
+  color: #696969;
+}
+#banner .banner .banner-left .banner-filter #banner-btn {
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  background-color: #f9ab00;
+  border-radius: 10px;
+  color: white;
+  transition: all 0.3s ease-out;
+}
+#banner .banner .banner-left .banner-filter #banner-btn:hover {
+  background-color: #ffffff;
+  color: #f9ab00;
+  border: 1px solid #f9ab00;
 }
 #banner .banner .banner-left .banner-trending {
   padding-top: 20px;
@@ -83,4 +171,8 @@ nav .navbar .nav-right .login {
   color: white;
   text-decoration: none;
   padding-left: 5px;
+}
+#banner .banner .banner-left-bottom {
+  position: absolute;
+  bottom: 20px;
 }/*# sourceMappingURL=style.css.map */
