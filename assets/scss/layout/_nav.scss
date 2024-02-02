@@ -99,16 +99,18 @@ nav {
 }
 
 .menu-container {
+    z-index: -100;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    display: block;
-    align-items: center;
-    justify-content: center;
+    display: none;
+    align-items: flex-start; /* Align to the top of the container */
+    justify-content: flex-start; /* Align to the left of the container */
     z-index: 1000;
+
 
     .menu-popup {
         background-color: $black;
@@ -118,6 +120,12 @@ nav {
         max-width: 300px;
         max-height: 100%; /* Set the maximum height for scrolling */
         overflow-y: auto; 
+        transform: translateX(-100%); /* Initially hide the menu off-screen to the left */
+        transition: transform 0.3s ease-out; /* Add transition for smooth animation */
+
+        &.menu-open {
+            transform: translateX(0); /* Move the menu back on-screen from the left */
+        }
 
         .popup-logo {
             display: flex;
