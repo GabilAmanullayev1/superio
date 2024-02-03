@@ -426,4 +426,84 @@ nav .navbar .nav-menu {
 #sec4 .sec4 .sec4-pagination div:hover:not(.active) {
   background-color: #f9ab00;
   color: white;
+}
+#sec4 .sec4 .sec4-container {
+  padding-top: 60px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+}
+#sec4 .sec4 .sec4-container .sec4-box {
+  position: relative;
+  display: flex;
+  background-color: #ffffff;
+  border: 1px solid #ECEDF2;
+  padding: 30px;
+  border-radius: 8px;
+}
+#sec4 .sec4 .sec4-container .sec4-box .sec4-favorites {
+  position: absolute;
+  right: 20px;
+}
+#sec4 .sec4 .sec4-container .sec4-box .sec4-favorites i {
+  cursor: pointer;
+  color: #696969;
+}
+#sec4 .sec4 .sec4-container .sec4-box .sec4-image {
+  max-width: 100%;
+}
+#sec4 .sec4 .sec4-container .sec4-box .sec4-image img {
+  min-width: 50px;
+  max-width: 50%;
+  height: auto;
+}
+#sec4 .sec4 .sec4-container .sec4-box .sec4-box-text .sec4-text-p {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 8px 0 0;
+  color: #696969;
+  font-size: 14px;
+}
+#sec4 .sec4 .sec4-container .sec4-box .sec4-box-text .sec4-text-a a {
+  text-decoration: none;
+  color: #202124;
+  font-weight: 500;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+#sec4 .sec4 .sec4-container .sec4-box .sec4-box-text .sec4-text-a a:hover {
+  color: #1967d2;
+}
+#sec4 .sec4 .sec4-container .sec4-box .sec4-box-text .sec4-job-type {
+  margin: 15px 0 0;
+}
+#sec4 .sec4 .sec4-container .sec4-box .sec4-box-text .sec4-job-type a {
+  text-decoration: none;
+  font-size: 14px;
+  padding: 4px 15px;
+  background-color: rgba(25, 103, 210, 0.15);
+  color: #1967d2;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 878px) {
+  #sec4 .sec4 .sec4-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #sec4 .sec4 .sec4-container .sec4-box {
+    display: flex;
+    background-color: #ffffff;
+    border: 1px solid #ECEDF2;
+    padding: 30px;
+    border-radius: 8px;
+  }
+  #sec4 .sec4 .sec4-container .sec4-box .sec4-image {
+    max-width: 100%;
+  }
+  #sec4 .sec4 .sec4-container .sec4-box .sec4-image img {
+    min-width: 50px;
+    max-width: 80%;
+    height: auto;
+  }
 }/*# sourceMappingURL=style.css.map */
