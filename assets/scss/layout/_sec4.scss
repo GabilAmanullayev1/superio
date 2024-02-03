@@ -1,0 +1,41 @@
+#sec4 {
+    background-color: $bgcolor1;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .sec4 {
+        .sec4-text {
+            @include text-center
+        }
+
+        .sec4-pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0 0 0;
+
+            div {
+              
+                cursor: pointer;
+                padding: 5px 15px 5px 15px;
+                border-radius: 10px;
+                background-color: white;
+
+                &.active {
+                    background-color: $yellow;
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+                    color: white;
+
+                }
+
+                &:hover:not(.active) {
+                    background-color: $yellow;
+                        color: white;
+                    
+                }
+
+               
+            }
+        }
+    }
+}
