@@ -1,0 +1,72 @@
+#sec5 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: $white;
+    .sec5-text{
+        @include text-center;
+        margin: 0 0 40px 0;
+    }
+
+    .sec5 {
+        &.swiper-container {
+            width: 100%;
+            padding: 10px;
+            overflow: hidden;
+
+            .swiper-slide {
+                background-color: $white;
+                border: 1px solid #ECEDF2;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                color: #fff;
+            }
+        }
+
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #fff;
+        }
+
+        .sec5-slide {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            .swiper-text{
+                h2{
+                    color: $blue;
+                    font-weight: 500;
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                }
+                p{
+                    color: $grey;
+                    font-weight: 500;
+                    margin-bottom: 20px;
+                }
+            }
+            .swiper-info{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                .swiper-name{
+                    h3{
+                        color: $black;
+                        font-weight: 500;
+                        line-height: 1.3;
+                        margin: 0;
+                    }
+                    p{
+                        color: $grey3;
+                        font-size: 14px;
+                    }
+                }
+
+            }
+        }
+    }
+}

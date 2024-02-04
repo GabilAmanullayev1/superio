@@ -85,3 +85,19 @@ function getDataJson() {
         });
 }
 getDataJson();
+document.addEventListener('DOMContentLoaded', function () {
+    // Initialize Swiper
+    let mySwiper = new Swiper('.sec5', {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 5000, // 10 seconds delay between slides
+            disableOnInteraction: false, // Autoplay will not be disabled after user interactions
+        },
+    });
+});
