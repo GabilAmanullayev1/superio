@@ -1,0 +1,27 @@
+#sec6 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .sec6 {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        
+
+        .sec6-box {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px  solid $border1;
+
+            img {
+                filter: grayscale(100%);
+                transition: all 0.5s ease;
+                max-width: 100%;
+                cursor: pointer;
+                &:hover{
+                    filter: grayscale(0%);
+                    scale: 1.1;
+                }
+            }
+        }
+    }
+}

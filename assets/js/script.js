@@ -101,3 +101,57 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 });
+
+
+function startCounting(targetId, endValue, duration, maxValue) {
+    let startValue = 0;
+    let currentTimestamp = new Date().getTime();
+    let increment = endValue / duration;
+
+    function updateCounter() {
+        let newTimestamp = new Date().getTime();
+        let deltaTime = newTimestamp - currentTimestamp;
+        currentTimestamp = newTimestamp;
+
+        startValue += increment * deltaTime;
+
+        // Cap the value at the maximum
+        startValue = Math.min(startValue, maxValue);
+
+        // Format the number and update the element
+        if (startValue >= 1000000) {
+            document.getElementById(targetId).innerText = (startValue / 1000000).toFixed(1) + "M";
+        } else if (startValue >= 1000) {
+            document.getElementById(targetId).innerText = (startValue / 1000).toFixed(1) + "k";
+        } else {
+            document.getElementById(targetId).innerText = Math.floor(startValue);
+        }
+
+        if (startValue < endValue) {
+            requestAnimationFrame(updateCounter);
+        }
+    }
+
+    updateCounter();
+}
+
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+    );
+}
+
+function onScroll() {
+    const targetSection = document.getElementById("sec8");
+    if (isElementInViewport(targetSection)) {
+        startCounting("usersCount", 4000000, 3000, 20000000);
+        startCounting("jobPositions", 12000, 3000, 20000);
+        startCounting("storiesShared", 20000000, 3000, 20000000);
+        window.removeEventListener("scroll", onScroll); // Remove the scroll event listener after starting the counting
+    }
+}
+
+// Attach the scroll event listener
+window.addEventListener("scroll", onScroll);

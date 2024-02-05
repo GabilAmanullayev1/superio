@@ -1,0 +1,22 @@
+#sec8{
+    padding-top: 30px;
+    padding-bottom: 100px;
+    .sec8{
+        display: flex;
+        justify-content: space-between;
+        .sec8-box{
+            text-align: center;
+            h2{
+                font-size: 50px;
+                font-weight: 500;
+                color: $black;
+            }
+            p{
+                color: $grey;
+                font-weight: 400;
+                font-size: 14px;
+                font-style: normal;
+            }
+        }
+    }
+}

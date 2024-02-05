@@ -510,7 +510,7 @@ nav .navbar .nav-menu {
 #sec5 {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: #ffffff;
+  background-color: #f5f7f8;
 }
 #sec5 .sec5-text {
   text-align: center;
@@ -538,7 +538,6 @@ nav .navbar .nav-menu {
 #sec5 .sec5.swiper-container .swiper-slide {
   background-color: #ffffff;
   border: 1px solid #ECEDF2;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 #sec5 .sec5.swiper-container .swiper-button-next,
 #sec5 .sec5.swiper-container .swiper-button-prev {
@@ -578,4 +577,111 @@ nav .navbar .nav-menu {
 #sec5 .sec5 .sec5-slide .swiper-info .swiper-name p {
   color: #77838f;
   font-size: 14px;
+}
+
+#sec6 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+#sec6 .sec6 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+#sec6 .sec6 .sec6-box {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ECEDF2;
+}
+#sec6 .sec6 .sec6-box img {
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
+  max-width: 100%;
+  cursor: pointer;
+}
+#sec6 .sec6 .sec6-box img:hover {
+  filter: grayscale(0%);
+  scale: 1.1;
+}
+
+#sec7 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#sec7 .sec7 {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+#sec7 .sec7 .sec7-left {
+  position: relative;
+}
+#sec7 .sec7 .sec7-left .sec7-image2 img {
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+}
+#sec7 .sec7 .sec7-right h2 {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 500;
+  color: #202124;
+  margin: 0 0 16px;
+}
+#sec7 .sec7 .sec7-right p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #696969;
+  margin: 0 0 16px;
+}
+#sec7 .sec7 .sec7-right .sec7-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #202124;
+}
+#sec7 .sec7 .sec7-right .sec7-list li {
+  font-weight: 400;
+  font-size: 15px;
+}
+#sec7 .sec7 .sec7-right .sec7-list i {
+  margin-right: 5px;
+}
+#sec7 .sec7 .sec7-right .sec7-btn {
+  margin-top: 20px;
+  padding: 15px 40px 15px 40px;
+  border-radius: 8px;
+  border: none;
+  background-color: #1967d2;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+#sec7 .sec7 .sec7-right .sec7-btn:hover {
+  background-color: #ffffff;
+  color: #1967d2;
+  border: 1px solid #1967d2;
+}
+
+#sec8 {
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+#sec8 .sec8 {
+  display: flex;
+  justify-content: space-between;
+}
+#sec8 .sec8 .sec8-box {
+  text-align: center;
+}
+#sec8 .sec8 .sec8-box h2 {
+  font-size: 50px;
+  font-weight: 500;
+  color: #202124;
+}
+#sec8 .sec8 .sec8-box p {
+  color: #696969;
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
 }/*# sourceMappingURL=style.css.map */
