@@ -1,0 +1,268 @@
+#nav2{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    background-color: $white;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0px;
+
+        .nav-left {
+            .nav-logo-2 {
+                display: block;
+            }
+        }
+
+        .nav-middle {
+            .nav-list {
+                display: flex;
+
+                li {
+                    padding: 0 20px;
+
+                    a {
+                        text-decoration: none;
+                        color: $black;
+                    }
+                }
+                .pages-dropdown {
+                    position: relative;
+                    i{
+                        margin-left: 5px;
+                    }
+            
+                    &:hover {
+                        .pages-menu {
+                            display: block;
+                        }
+                    }
+                    .pages-menu {
+                        display: none;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        background-color: #fff;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                        border-radius: 8px;
+                        z-index: 1000;
+                        
+            
+                        li {
+                            padding: 10px 50px 10px 10px;
+                        }
+            
+                        a {
+                            color: #333;
+                            text-decoration: none;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav-right {
+
+            .job-post,
+            .favorites-menu {
+                background-color: $blue;
+                color: $white;
+
+                i {
+                    margin-right: 10px;
+                }
+
+                @include button1
+            }
+
+            .login {
+                background-color: $bgcolor1;
+                color: $blue;
+                transition: all 0.3s ease-out;
+                @include button1;
+
+                &:hover {
+                    background-color: $blue;
+                    color: $white;
+                }
+            }
+
+        }
+
+        .nav-menu {
+            display: none;
+        }
+
+    }
+}
+
+.menu-container {
+    z-index: -100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: flex-start; /* Align to the top of the container */
+    justify-content: flex-start; /* Align to the left of the container */
+    z-index: 1000;
+
+
+    .menu-popup {
+        background-color: $black;
+        height: 100%;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        max-height: 100%; /* Set the maximum height for scrolling */
+        overflow-y: auto; 
+        transform: translateX(-100%); /* Initially hide the menu off-screen to the left */
+        transition: transform 0.3s ease-out; /* Add transition for smooth animation */
+
+        &.menu-open {
+            transform: translateX(0); /* Move the menu back on-screen from the left */
+        }
+
+        .popup-logo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            background-color: aliceblue;
+            .popup-close{
+                i{
+                    font-size: 25px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .popup-list{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        li{
+            a{
+                color: $grey2;
+                text-decoration: none;
+            }
+        }
+        .pages-dropdown {
+            position: relative;
+            transition: all 0.3s ease-out;
+            i{
+                margin-left: 5px;
+            }
+    
+            &:hover {
+                .pages-menu {
+                    display: block;
+                }
+            }
+            .pages-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                border-radius: 8px;
+                z-index: 1000;
+                
+                li {
+                    padding: 10px 50px 10px 10px;
+                }
+    
+                a {
+                    color: #333;
+                    text-decoration: none;
+                    display: block;
+                 
+                }
+            }
+           
+        }
+    }
+    .popup-text{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        h2{
+            color: $grey;
+            font-size: 16px;
+        }
+        h4{
+            color: $white;
+        }
+        p{
+            color: white;
+        }
+
+    }
+    .popup-media{
+        display: flex;
+        gap: 20px;
+        .popup-media1{
+            padding: 15px;
+            i{
+                color: $grey;
+            }
+        }
+        
+    }
+}
+
+
+
+@media screen and (max-width: $breakpoint-lg) {
+    #nav2{
+        position: relative;
+        background-color: white;
+        .navbar {
+            .nav-left {
+                .nav-logo {
+                    display: none;
+                }
+
+                .nav-logo-2 {
+                    display: block;
+                }
+            }
+
+            .nav-middle {
+                display: none;
+            }
+
+            .nav-right {
+                display: none;
+            }
+
+            .nav-menu {
+                display: flex;
+
+                a {
+                    color: black;
+                    margin-right: 50px;
+
+                    i {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+#job-list{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: $bgcolor1;
+    
+}
