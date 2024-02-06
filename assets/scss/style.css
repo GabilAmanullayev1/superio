@@ -267,16 +267,18 @@ nav .navbar .nav-menu {
   justify-content: center;
   padding: 30px 10px 30px 10px;
   border-radius: 20px;
+  width: 100%;
 }
 #banner .banner .banner-left .banner-filter .banner-search-container {
   display: flex;
   align-items: center;
+  width: 70%;
 }
 #banner .banner .banner-left .banner-filter .banner-search-container #banner-search {
   border: none;
   padding: 15px;
-  border-right: 1px solid #e8e9eb;
   font-size: 16px;
+  width: 100%;
 }
 #banner .banner .banner-left .banner-filter .banner-search-container #banner-search:focus {
   outline: none;
@@ -293,19 +295,6 @@ nav .navbar .nav-menu {
   color: #696969;
   margin-left: 10px;
   font-size: 20px;
-}
-#banner .banner .banner-left .banner-filter .banner-select-container #banner-select {
-  margin-right: 10px;
-  color: #696969;
-  font-size: 16px;
-  border: none;
-  padding: 15px;
-}
-#banner .banner .banner-left .banner-filter .banner-select-container #banner-select:focus {
-  outline: none;
-}
-#banner .banner .banner-left .banner-filter .banner-select-container #banner-select option {
-  color: #696969;
 }
 #banner .banner .banner-left .banner-filter #banner-btn {
   border: none;

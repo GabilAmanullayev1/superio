@@ -1,82 +1,93 @@
-let navMenu = document.querySelector('.menu');
-let popupClose = document.querySelector('.popup-close');
-let menuContainer = document.querySelector('.menu-container');
-
-function showMenuContainer() {
-    menuContainer.style.display = 'flex';
-    setTimeout(() => {
-        menuContainer.querySelector('.menu-popup').classList.add('menu-open');
-    }, 10); // Delay the class addition slightly for the transition to work smoothly
-}
-
-function hideMenuContainer() {
-    menuContainer.querySelector('.menu-popup').classList.remove('menu-open');
-    setTimeout(() => {
-        menuContainer.style.display = 'none';
-    }, 300); // Wait for the transition to complete before hiding the container
-}
-navMenu.addEventListener('click', showMenuContainer);
-popupClose.addEventListener('click', hideMenuContainer);
 let jobList = document.querySelector('.job-list');
-let search = document.getElementById("banner-search");
-let sort = document.getElementById("banner-select");
+let search = document.getElementById("joblist-search");
+let sort = document.getElementById("joblist-select");
+const bannerSelect = document.getElementById("banner-select2");
+
+let originalArr = [];  // Store the original data
 let copyArr = [];
 let filteredArr = [];
 
-function getDataJson() {
+function getDataJson2() {
     fetch(`http://localhost:3000/jobs`)
         .then(response => response.json())
         .then(data => {
+            originalArr = data;  // Save the original data
             copyArr = data;
-            jobList.innerHTML = "";
-            filteredArr = filteredArr.length || search.value ? filteredArr : data;
-            filteredArr.forEach(element => {
-                jobList.innerHTML += `
-                    <div class="card">
-                        <div class="product-image"><img src="${element.jobImage}" alt=""></div>
-                        <div class="product-text">
-                            <h4>${element.city}</h4>
-                            <p>${element.category}</p>
-                            <h5>${element.job}</h5>
-                        </div>   
-                        <div class="product-button">
-                            <button><a href="details.html?id=${element.id}">Details</a></button>
-                        </div> 
-                    </div>
-                `;
-            });
+            applyFilterAndSort(); // Apply filtering and sorting after fetching data
+            renderJobList();
         });
 }
 
-getDataJson();
+function applySort() {
+    let sortOrder = sort.value || "def";
+    if (sortOrder === "des") {
+        filteredArr.sort((a, b) => parseFloat(b.salary.replace(/[^\d.]/g, '')) - parseFloat(a.salary.replace(/[^\d.]/g, '')));
+    } else if (sortOrder === "asc") {
+        filteredArr.sort((a, b) => parseFloat(a.salary.replace(/[^\d.]/g, '')) - parseFloat(b.salary.replace(/[^\d.]/g, '')));
+    } else if (sortOrder === "def") {
+        filteredArr.sort((a, b) => a.job.localeCompare(b.job));
+    }
+}
 
-search.addEventListener("input", (e) => {
+function applyFilterAndSort() {
     filteredArr = copyArr;
-    filteredArr = filteredArr.filter((el) => {
-        return el.job.toLowerCase().includes(e.target.value.toLowerCase());
+
+    // Apply search filter after trimming
+    if (search.value) {
+        const trimmedSearchValue = search.value.trim();
+        filteredArr = filteredArr.filter(el => el.job.toLowerCase().includes(trimmedSearchValue.toLowerCase()));
+    }
+
+    // Apply sorting
+    applySort();
+}
+
+function renderJobList() {
+    jobList.innerHTML = "";
+    filteredArr.forEach(element => {
+        jobList.innerHTML += `
+            <div class="card">
+                <div class="product-image"><img src="${element.jobImage}" alt=""></div>
+                <div class="product-text">
+                    <h4>${element.city}</h4>
+                    <p>${element.category}</p>
+                    <h5>${element.job}</h5>
+                    <h5>${element.salary}</h5>
+                </div>   
+                <div class="product-button">
+                    <button><a href="details.html?id=${element.id}">Details</a></button>
+                </div> 
+            </div>
+        `;
     });
-    getDataJson();
+}
+
+getDataJson2();
+
+search.addEventListener("input", () => {
+    applyFilterAndSort();
+    renderJobList();
 });
 
+sort.addEventListener('change', () => {
+    applySort();
+    renderJobList();
+});
 
-sort.addEventListener('change', (e) => {
-    filteredArr = copyArr.slice(); // Create a copy of the original array
+let joblistSearchTerm = localStorage.getItem('joblistSearchTerm');
+let selectedCity = localStorage.getItem('selectedCity');
 
-    // Apply search filter
-    if (search.value.trim() !== "") {
-        filteredArr = filteredArr.filter((el) => {
-            return el.job.toLowerCase().includes(search.value.toLowerCase().trim());
-        });
-    }
+if (joblistSearchTerm) {
+    search.value = joblistSearchTerm;
+}
 
-    // Apply city filter
-    if (e.target.value !== "City,state") {
-        const selectedCity = e.target.value.toLowerCase();
+localStorage.removeItem('joblistSearchTerm');
+localStorage.removeItem('selectedCity');
 
-        // Sort by selected city
-        filteredArr = filteredArr.filter((el) => el.city.toLowerCase() === selectedCity);
-    }
 
-    // Update the job list with the filtered and sorted data
-    getDataJson();
+getDataJson2();
+
+window.addEventListener('beforeunload', function () {
+
+    search.value = '';
 });

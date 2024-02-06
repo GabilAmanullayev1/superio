@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,7 @@
         href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 </head>
+
 <body>
     <section id="nav2">
         <div class="container">
@@ -97,21 +99,29 @@
             <div class="banner-filter">
                 <div class="banner-search-container">
                     <i class="fa-solid fa-search"></i>
-                    <input type="search" id="banner-search" placeholder="Job title,keywords">
+                    <input type="search" id="joblist-search" placeholder="Job title,keywords">
                 </div>
-                <div class="banner-select-container">
+                <div class="joblist">
                     <i class="fa-solid fa-location-dot"></i>
-                    <select id="banner-select">
+                    <select id="joblist-select">
+                        <option value="def">default</option>
                         <option value="asc">ascending</option>
                         <option value="des">descending</option>
-                        <option value="def">default</option>
+                    </select>
+                    <select id="alpha-select">
+                        <option value="az">a-z</option>
+                        <option value="za">z-a</option>
                     </select>
                 </div>
             </div>
+           
             <div class="job-list">
             </div>
         </div>
     </section>
-    <script src="assets/js/script.js"> </script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/job-list.js"> </script>
 </body>
+
 </html>

@@ -155,70 +155,15 @@ function onScroll() {
 
 // Attach the scroll event listener
 window.addEventListener("scroll", onScroll);
+document.getElementById('banner-btn').addEventListener('click', function () {
+    // Get the value from the banner-search input
+    let searchTerm = document.getElementById('banner-search').value;
+    
 
-let jobList = document.querySelector('.job-list');
-let search = document.getElementById("banner-search");
-let sort = document.getElementById("banner-select");
-const bannerSelect = document.getElementById("banner-select2");
-
-let copyArr = [];
-let filteredArr = [];
-
-function getDataJson2() {
-    fetch(`http://localhost:3000/jobs`)
-        .then(response => response.json())
-        .then(data => {
-            copyArr = data;
-            jobList.innerHTML = "";
-            filteredArr = filteredArr.length || search.value ? filteredArr : data;
-            filteredArr.forEach(element => {
-                jobList.innerHTML += `
-                    <div class="card">
-                        <div class="product-image"><img src="${element.jobImage}" alt=""></div>
-                        <div class="product-text">
-                            <h4>${element.city}</h4>
-                            <p>${element.category}</p>
-                            <h5>${element.job}</h5>
-                            <h5>${element.salary}</h5>
-                        </div>   
-                        <div class="product-button">
-                            <button><a href="details.html?id=${element.id}">Details</a></button>
-                        </div> 
-                    </div>
-                `;
-            });
-        });
-}
-
-getDataJson2();
-
-search.addEventListener("input", (e) => {
-    filteredArr = copyArr;
-    filteredArr = filteredArr.filter((el) => {
-        return el.job.toLowerCase().includes(e.target.value.toLowerCase());
-    });
-    getDataJson2();
-});
+    // Set the values to the joblist-search input and banner-select in localStorage
+    localStorage.setItem('joblistSearchTerm', searchTerm);
 
 
-sort.addEventListener('change', (e) => {
-    if (e.target.value === "des") {
-        filteredArr.sort((a, b) => parseFloat(b.salary.replace(/[^\d.]/g, '')) - parseFloat(a.salary.replace(/[^\d.]/g, '')));
-    } else if (e.target.value === "asc") {
-        filteredArr.sort((a, b) => parseFloat(a.salary.replace(/[^\d.]/g, '')) - parseFloat(b.salary.replace(/[^\d.]/g, '')));
-    } else {
-        filteredArr = copyArr;
-    }
-    getDataJson2();
-});
-bannerSelect.addEventListener("change", (e) => {
-    const selectedCity = e.target.value.toLowerCase();
-
-    if (selectedCity === "all") {
-        filteredArr = copyArr;
-    } else {
-        filteredArr = copyArr.filter((el) => el.city.toLowerCase() === selectedCity);
-    }
-
-    getDataJson2();
+    // Redirect to joblist.html
+    window.location.href = 'joblist.html';
 });
