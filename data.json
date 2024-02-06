@@ -233,6 +233,32 @@
             "job-type": "Full-time",
             "salary": "$2550 / month",
             "experience": "4 years"
+          },
+          {
+            "id": 19,
+            "name": "Upwork",
+            "password": "Upwork111",
+            "gmail": "upwork@gmail.com",
+            "category": "Development",
+            "city": "Paris",
+            "job": "Assistant",
+            "jobImage":"assets/images/y9.jpg",
+            "job-type": "Part-time",
+            "salary": "$600 / month",
+            "experience": "2 years"
+          },
+          {
+            "id": 20,
+            "name": "Upwork",
+            "password": "Upwork111",
+            "gmail": "upwork@gmail.com",
+            "category": "Development",
+            "city": "Paris",
+            "job": "Web Developer",
+            "jobImage":"assets/images/y9.jpg",
+            "job-type": "Part-time",
+            "salary": "$900 / month",
+            "experience": "2 years"
           }
 
     ]

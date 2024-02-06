@@ -770,8 +770,10 @@ nav .navbar .nav-menu {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   display: none;
-  align-items: flex-start; /* Align to the top of the container */
-  justify-content: flex-start; /* Align to the left of the container */
+  align-items: flex-start;
+  /* Align to the top of the container */
+  justify-content: flex-start;
+  /* Align to the left of the container */
   z-index: 1000;
 }
 .menu-container .menu-popup {
@@ -780,13 +782,17 @@ nav .navbar .nav-menu {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   max-width: 300px;
-  max-height: 100%; /* Set the maximum height for scrolling */
+  max-height: 100%;
+  /* Set the maximum height for scrolling */
   overflow-y: auto;
-  transform: translateX(-100%); /* Initially hide the menu off-screen to the left */
-  transition: transform 0.3s ease-out; /* Add transition for smooth animation */
+  transform: translateX(-100%);
+  /* Initially hide the menu off-screen to the left */
+  transition: transform 0.3s ease-out;
+  /* Add transition for smooth animation */
 }
 .menu-container .menu-popup.menu-open {
-  transform: translateX(0); /* Move the menu back on-screen from the left */
+  transform: translateX(0);
+  /* Move the menu back on-screen from the left */
 }
 .menu-container .menu-popup .popup-logo {
   display: flex;
@@ -862,6 +868,28 @@ nav .navbar .nav-menu {
 }
 .menu-container .popup-media .popup-media1 i {
   color: #696969;
+}
+
+#job-list .job-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+#job-list .job-list .card {
+  display: flex;
+  border: 1px solid #ECEDF2;
+  background-color: #ffffff;
+  justify-content: space-between;
+}
+#job-list .job-list .card .job-image {
+  max-width: 100%;
+}
+#job-list .job-list .card .job-image img {
+  min-width: 50px;
+  max-width: 50%;
+  height: auto;
 }
 
 @media screen and (max-width: 1095px) {

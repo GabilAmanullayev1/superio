@@ -1,4 +1,4 @@
-#nav2{
+#nav2 {
     position: absolute;
     z-index: 10;
     width: 100%;
@@ -28,17 +28,20 @@
                         color: $black;
                     }
                 }
+
                 .pages-dropdown {
                     position: relative;
-                    i{
+
+                    i {
                         margin-left: 5px;
                     }
-            
+
                     &:hover {
                         .pages-menu {
                             display: block;
                         }
                     }
+
                     .pages-menu {
                         display: none;
                         position: absolute;
@@ -48,12 +51,12 @@
                         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
                         border-radius: 8px;
                         z-index: 1000;
-                        
-            
+
+
                         li {
                             padding: 10px 50px 10px 10px;
                         }
-            
+
                         a {
                             color: #333;
                             text-decoration: none;
@@ -108,8 +111,10 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     display: none;
-    align-items: flex-start; /* Align to the top of the container */
-    justify-content: flex-start; /* Align to the left of the container */
+    align-items: flex-start;
+    /* Align to the top of the container */
+    justify-content: flex-start;
+    /* Align to the left of the container */
     z-index: 1000;
 
 
@@ -119,13 +124,17 @@
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         max-width: 300px;
-        max-height: 100%; /* Set the maximum height for scrolling */
-        overflow-y: auto; 
-        transform: translateX(-100%); /* Initially hide the menu off-screen to the left */
-        transition: transform 0.3s ease-out; /* Add transition for smooth animation */
+        max-height: 100%;
+        /* Set the maximum height for scrolling */
+        overflow-y: auto;
+        transform: translateX(-100%);
+        /* Initially hide the menu off-screen to the left */
+        transition: transform 0.3s ease-out;
+        /* Add transition for smooth animation */
 
         &.menu-open {
-            transform: translateX(0); /* Move the menu back on-screen from the left */
+            transform: translateX(0);
+            /* Move the menu back on-screen from the left */
         }
 
         .popup-logo {
@@ -134,37 +143,43 @@
             justify-content: space-between;
             padding: 15px;
             background-color: aliceblue;
-            .popup-close{
-                i{
+
+            .popup-close {
+                i {
                     font-size: 25px;
                     cursor: pointer;
                 }
             }
         }
     }
-    .popup-list{
+
+    .popup-list {
         padding: 20px;
         display: flex;
         flex-direction: column;
         gap: 25px;
-        li{
-            a{
+
+        li {
+            a {
                 color: $grey2;
                 text-decoration: none;
             }
         }
+
         .pages-dropdown {
             position: relative;
             transition: all 0.3s ease-out;
-            i{
+
+            i {
                 margin-left: 5px;
             }
-    
+
             &:hover {
                 .pages-menu {
                     display: block;
                 }
             }
+
             .pages-menu {
                 display: none;
                 position: absolute;
@@ -174,57 +189,88 @@
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
                 border-radius: 8px;
                 z-index: 1000;
-                
+
                 li {
                     padding: 10px 50px 10px 10px;
                 }
-    
+
                 a {
                     color: #333;
                     text-decoration: none;
                     display: block;
-                 
+
                 }
             }
-           
+
         }
     }
-    .popup-text{
+
+    .popup-text {
         display: flex;
         flex-direction: column;
         gap: 15px;
         padding: 15px;
-        h2{
+
+        h2 {
             color: $grey;
             font-size: 16px;
         }
-        h4{
+
+        h4 {
             color: $white;
         }
-        p{
+
+        p {
             color: white;
         }
 
     }
-    .popup-media{
+
+    .popup-media {
         display: flex;
         gap: 20px;
-        .popup-media1{
+
+        .popup-media1 {
             padding: 15px;
-            i{
+
+            i {
                 color: $grey;
             }
         }
-        
+
     }
 }
 
-
+#job-list {
+    .job-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        .card{
+            display: flex;
+            border: 1px solid $border1;
+            background-color: $white;
+            justify-content: space-between;
+            .job-image {
+                max-width: 100%;
+                img {
+                    min-width: 50px;
+                    max-width: 50%;
+                    height: auto;
+                }
+            }
+           
+        }   
+    }
+}
 
 @media screen and (max-width: $breakpoint-lg) {
-    #nav2{
+    #nav2 {
         position: relative;
         background-color: white;
+
         .navbar {
             .nav-left {
                 .nav-logo {
@@ -260,9 +306,10 @@
     }
 
 }
-#job-list{
+
+#job-list {
     padding-top: 100px;
     padding-bottom: 100px;
     background-color: $bgcolor1;
-    
+
 }

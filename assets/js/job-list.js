@@ -47,14 +47,14 @@ function renderJobList() {
     filteredArr.forEach(element => {
         jobList.innerHTML += `
             <div class="card">
-                <div class="product-image"><img src="${element.jobImage}" alt=""></div>
-                <div class="product-text">
+                <div class="job-image"><img src="${element.jobImage}" alt=""></div>
+                <div class="job-text">
                     <h4>${element.city}</h4>
                     <p>${element.category}</p>
                     <h5>${element.job}</h5>
                     <h5>${element.salary}</h5>
                 </div>   
-                <div class="product-button">
+                <div class="job-button">
                     <button><a href="details.html?id=${element.id}">Details</a></button>
                 </div> 
             </div>
@@ -131,14 +131,14 @@ function renderJobList() {
     filteredArr.forEach(element => {
         jobList.innerHTML += `
             <div class="card">
-                <div class="product-image"><img src="${element.jobImage}" alt=""></div>
-                <div class="product-text">
+                <div class="job-image"><img src="${element.jobImage}" alt=""></div>
+                <div class="job-text">
                     <h4>${element.city}</h4>
                     <p>${element.category}</p>
                     <h5>${element.job}</h5>
                     <h5>${element.salary}</h5>
                 </div>   
-                <div class="product-button">
+                <div class="job-button">
                     <button><a href="details.html?id=${element.id}">Details</a></button>
                 </div> 
             </div>
