@@ -91,3 +91,70 @@ window.addEventListener('beforeunload', function () {
 
     search.value = '';
 });
+// Add the following code to your existing JavaScript
+
+// Add an event listener for the alpha-select dropdown
+const alphaSelect = document.getElementById("alpha-select");
+alphaSelect.addEventListener('change', () => {
+    applyAlphaSort();
+    renderJobList();
+});
+
+function applyAlphaSort() {
+    const alphaSortOrder = alphaSelect.value;
+
+    if (alphaSortOrder === "az") {
+        filteredArr.sort((a, b) => a.job.localeCompare(b.job));
+    } else if (alphaSortOrder === "za") {
+        filteredArr.sort((a, b) => b.job.localeCompare(a.job));
+    } else if (alphaSortOrder === "def") {
+        filteredArr.sort((a, b) => a.id - b.id);
+    }
+
+    renderJobList();
+}
+
+
+function applySort() {
+    let sortOrder = sort.value || "def";
+
+    if (sortOrder === "des") {
+        filteredArr.sort((a, b) => parseFloat(b.salary.replace(/[^\d.]/g, '')) - parseFloat(a.salary.replace(/[^\d.]/g, '')));
+    } else if (sortOrder === "asc") {
+        filteredArr.sort((a, b) => parseFloat(a.salary.replace(/[^\d.]/g, '')) - parseFloat(b.salary.replace(/[^\d.]/g, '')));
+    } else if (sortOrder === "def") {
+        filteredArr.sort((a, b) => a.id - b.id);
+    }
+}
+function renderJobList() {
+    jobList.innerHTML = "";
+    filteredArr.forEach(element => {
+        jobList.innerHTML += `
+            <div class="card">
+                <div class="product-image"><img src="${element.jobImage}" alt=""></div>
+                <div class="product-text">
+                    <h4>${element.city}</h4>
+                    <p>${element.category}</p>
+                    <h5>${element.job}</h5>
+                    <h5>${element.salary}</h5>
+                </div>   
+                <div class="product-button">
+                    <button><a href="details.html?id=${element.id}">Details</a></button>
+                </div> 
+            </div>
+        `;
+    });
+}
+
+const joblistSelect = document.getElementById("joblist-select");
+joblistSelect.addEventListener('change', () => {
+    applySort();
+    renderJobList();
+});
+
+const joblistSearch = document.getElementById("joblist-search");
+joblistSearch.addEventListener("input", () => {
+    applyFilterAndSort();
+    renderJobList();
+});
+

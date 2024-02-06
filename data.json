@@ -23,7 +23,7 @@
             "jobImage":"assets/images/y12.jpg",
             "gmail": "udemy@gmail.com",
             "job-type": "Remote",
-            "salary": "$370 / week",
+            "salary": "$1370 / month",
             "experience": "3 years"
           },
           {
@@ -49,7 +49,7 @@
             "job": "Graphic Designer",
             "jobImage":"assets/images/y5.jpg",
             "job-type": "Part-time",
-            "salary": "$25 / hour",
+            "salary": "$1225 / month",
             "experience": "2 years"
           },
           {
@@ -114,7 +114,7 @@
             "jobImage":"assets/images/y9.jpg",
             "gmail": "upwork@gmail.com",
             "job-type": "Part-time",
-            "salary": "$70 / hour",
+            "salary": "$700 / month",
             "experience": "4 years"
           },
           {
@@ -127,7 +127,7 @@
             "jobImage":"assets/images/y10.jpg",
             "gmail": "healthtech@mail.com",
             "job-type": "Full-time",
-            "salary": "$85 / day",
+            "salary": "$850 / month",
             "experience": "5 years"
           },
           {
@@ -140,7 +140,7 @@
             "jobImage":"assets/images/y11.jpg",
             "gmail": "media@gmail.com",
             "job-type": "Part-time",
-            "salary": "$70 / day",
+            "salary": "$700 / month",
             "experience": "3 years"
           },
           {
@@ -153,7 +153,7 @@
             "job": "Product manager",
             "jobImage":"assets/images/y9.jpg",
             "job-type": "Part-time",
-            "salary": "$60,000 / year",
+            "salary": "$600 / month",
             "experience": "2 years"
           },
           {
@@ -166,7 +166,7 @@
             "job": "Product manager",
             "jobImage":"assets/images/y7.jpg",
             "job-type": "Full-time",
-            "salary": "$725 / week",
+            "salary": "$2250 / month",
             "experience": "4 years"
           },
           {
@@ -179,7 +179,7 @@
             "job": "Event Coordinator",
             "jobImage":"assets/images/y5.jpg",
             "job-type": "Temporary",
-            "salary": "$455 / week",
+            "salary": "$4550 / month",
             "experience": "2 years"
           },
           {
@@ -192,7 +192,7 @@
             "job": "Assistant",
             "jobImage":"assets/images/y3.jpg",
             "job-type": "Remote",
-            "salary": "$90 / week",
+            "salary": "$900/ month",
             "experience": "6 years"
           },
           {
@@ -205,8 +205,35 @@
             "jobImage":"assets/images/y2.jpg",
             "gmail": "employer@gmail.com",
             "job-type": "Full-time",
-            "salary": "$80,000 / year",
+            "salary": "$8000 / month",
             "experience": "3 years"
+          },
+          {
+            "id": 17,
+            "name": "Employer",
+            "category": "Development",
+            "password": "Employer123",
+            "city": "London",
+            "job": "Game Developer",
+            "jobImage":"assets/images/y2.jpg",
+            "gmail": "employer@mail.ru",
+            "job-type": "Internship",
+            "salary": "$1200 / month ",
+            "experience": "2 years"
+          }, 
+          {
+            "id": 18,
+            "name": "Stripe",
+            "gmail": "stripe@gmail.com",
+            "password": "Stripe123",
+            "category": "Finance",
+            "city": "London",
+            "job": "Senior Solution Manager",
+            "jobImage":"assets/images/y7.jpg",
+            "job-type": "Full-time",
+            "salary": "$2550 / month",
+            "experience": "4 years"
           }
+
     ]
   }
