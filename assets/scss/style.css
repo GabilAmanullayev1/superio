@@ -878,10 +878,11 @@ nav .navbar .nav-menu {
   gap: 20px;
 }
 #job-list .job-list .card {
+  border-radius: 8px;
+  padding: 30px;
   display: flex;
   border: 1px solid #ECEDF2;
   background-color: #ffffff;
-  justify-content: space-between;
 }
 #job-list .job-list .card .job-image {
   max-width: 100%;
@@ -890,6 +891,35 @@ nav .navbar .nav-menu {
   min-width: 50px;
   max-width: 50%;
   height: auto;
+}
+#job-list .job-list .card .joblist-box-text .joblist-text-p {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 8px 0 0;
+  color: #696969;
+  font-size: 14px;
+}
+#job-list .job-list .card .joblist-box-text .joblist-text-a a {
+  text-decoration: none;
+  color: #202124;
+  font-weight: 500;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+#job-list .job-list .card .joblist-box-text .joblist-text-a a:hover {
+  color: #1967d2;
+}
+#job-list .job-list .card .joblist-box-text .joblist-job-type {
+  margin: 15px 0 0;
+}
+#job-list .job-list .card .joblist-box-text .joblist-job-type a {
+  text-decoration: none;
+  font-size: 14px;
+  padding: 4px 15px;
+  background-color: rgba(25, 103, 210, 0.15);
+  color: #1967d2;
+  border-radius: 15px;
 }
 
 @media screen and (max-width: 1095px) {

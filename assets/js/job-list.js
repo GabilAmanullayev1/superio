@@ -48,15 +48,18 @@ function renderJobList() {
         jobList.innerHTML += `
             <div class="card">
                 <div class="job-image"><img src="${element.jobImage}" alt=""></div>
-                <div class="job-text">
-                    <h4>${element.city}</h4>
-                    <p>${element.category}</p>
-                    <h5>${element.job}</h5>
-                    <h5>${element.salary}</h5>
-                </div>   
-                <div class="job-button">
-                    <button><a href="details.html?id=${element.id}">Details</a></button>
-                </div> 
+                <div class="joblist-box-text">
+                <div class="joblist-text-a"><a href="#">${element.job}</a></div>
+                <div class="joblist-text-p">
+                    <div class="joblist-text-p1"><i class="fa-solid fa-briefcase"></i>
+                    ${element.category}</div>
+                    <div class="joblist-text-p2"><i class="fa-solid fa-location-dot"></i>
+                    ${element.city}</div>
+                    <div class="joblist-text-p3"><i class="fa-solid fa-money-bill"></i>
+                    ${element.salary}</div>
+                </div>
+                <div class="joblist-job-type"><a href="#">Full Time</a></div>
+            </div> 
             </div>
         `;
     });
@@ -131,16 +134,18 @@ function renderJobList() {
     filteredArr.forEach(element => {
         jobList.innerHTML += `
             <div class="card">
-                <div class="job-image"><img src="${element.jobImage}" alt=""></div>
-                <div class="job-text">
-                    <h4>${element.city}</h4>
-                    <p>${element.category}</p>
-                    <h5>${element.job}</h5>
-                    <h5>${element.salary}</h5>
-                </div>   
-                <div class="job-button">
-                    <button><a href="details.html?id=${element.id}">Details</a></button>
-                </div> 
+            <div class="job-image"><img src="${element.jobImage}" alt=""></div>
+            <div class="joblist-box-text">
+            <div class="joblist-text-a"><a href="#">${element.job}</a></div>
+            <div class="joblist-text-p">
+                <div class="joblist-text-p1"><i class="fa-solid fa-briefcase"></i>
+                ${element.category}</div>
+                <div class="joblist-text-p2"><i class="fa-solid fa-location-dot"></i>
+                ${element.city}</div>
+                <div class="joblist-text-p3"><i class="fa-solid fa-money-bill"></i>
+                ${element.salary}</div>
+            </div>
+            <div class="joblist-job-type"><a href="#">Full Time</a></div>
             </div>
         `;
     });

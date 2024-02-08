@@ -249,16 +249,54 @@
         justify-content: center;
         gap: 20px;
         .card{
+            border-radius: 8px;
+            padding: 30px;
             display: flex;
             border: 1px solid $border1;
             background-color: $white;
-            justify-content: space-between;
             .job-image {
                 max-width: 100%;
                 img {
                     min-width: 50px;
                     max-width: 50%;
                     height: auto;
+                }
+            }
+            .joblist-box-text {
+                .joblist-text-p {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 20px;
+                    margin: 8px 0 0;
+                    color: $grey;
+                    font-size: 14px;
+
+                }
+
+                .joblist-text-a {
+                    a {
+                        text-decoration: none;
+                        color: $black;
+                        font-weight: 500;
+                        font-size: 18px;
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            color: $blue;
+                        }
+                    }
+                }
+
+                .joblist-job-type {
+                    margin: 15px 0 0;
+                    a{
+                        text-decoration: none;
+                        font-size: 14px;
+                        padding: 4px 15px;
+                        background-color: rgba(25, 103, 210, 0.15);
+                        color:$blue;
+                        border-radius: 15px;
+                    }
                 }
             }
            
