@@ -1,0 +1,90 @@
+#details {
+    background-color: $bgcolor1;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .details-left {
+            .card {
+                border-radius: 8px;
+                width: 100%;
+                padding: 30px;
+                display: flex;
+                align-items: center;
+
+
+                .job-image {
+                    max-width: 100%;
+
+                    img {
+                        border-radius: 50%;
+                        min-width: 50px;
+                        max-width: 80%;
+                        height: auto;
+                    }
+                }
+
+
+                .details-box-text {
+                    margin-top: 10px;
+
+                    .details-text-h2 {
+                        font-size: 22px;
+                        font-weight: 500;
+                        color: $black;
+
+                    }
+
+                    .details-description {
+                        margin-top: 5px;
+                        color: $grey;
+
+                        a {
+                            color: $blue; // Blue color for the link, you can customize this
+                            text-decoration: none;
+                            // Add other styling properties as needed
+                        }
+                    }
+
+                    .details-job-type {
+                        display: flex;
+                        margin-top: 10px;
+
+                        p {
+                            margin-right: 20px;
+                            padding: 5px 10px;
+                            background-color: rgba(25, 103, 210, 0.15);
+                            color: $blue;
+                            border-radius: 15px;
+                            font-size: 14px;
+                            border: 1px solid $border1;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .details-right {
+            .details-apply {
+                @include button1;
+                background-color: $yellow;
+                transition: all 0.5s ease;
+                color: $white;
+
+                &:hover {
+                    background-color: transparent;
+                    border: 1px solid $yellow;
+                    color: $yellow;
+                }
+            }
+
+           
+
+        }
+    }
+}

@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job List</title>
+    <title>Details</title>
     <link rel="stylesheet" href="assets/scss/style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -16,7 +15,6 @@
         href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 </head>
-
 <body>
     <section id="nav2">
         <div class="container">
@@ -94,38 +92,18 @@
             </div>
         </div>
     </div>
-    <section id="job-list">
+    <section id="details">
         <div class="container">
-            <div class="banner-filter">
-                <div class="banner-search-container">
-                    <i class="fa-solid fa-search"></i>
-                    <input type="search" id="joblist-search" placeholder="Job title,keywords">
+            <div class="details">
+                <div class="details-left"></div>
+                <div class="details-right">
+                    <button class="details-apply">Apply Now<button>
                 </div>
-                <div class="joblist-select-container">
-                    <label for="">Salary</label>
-                    <select id="joblist-select">
-                        <option value="def">Default</option>
-                        <option value="asc">Ascending</option>
-                        <option value="des">Descending</option>
-                        
-                    </select>
-                    <label for="">Job Name<i class="fa-solid fa-arrow-up-a-z"></i></label>
-                    <select id="alpha-select">
-                        <option value="az">A-Z</option>
-                        <option value="za">Z-A</option>
-                        <option value="def" selected>Default</option>
-                    </select>
-                </div>
-            </div>
-           
-            <div class="job-list">
-               
+
             </div>
         </div>
     </section>
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/js/job-list.js"> </script>
+    
+    <script src="assets/js/details.js"></script>
 </body>
-
 </html>

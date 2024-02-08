@@ -51,11 +51,22 @@ function showJobs(category, page) {
                         <div class="sec4-text-p3"><i class="fa-solid fa-money-bill"></i>
                         ${element.salary}</div>
                     </div>
-                    <div class="sec4-job-type"><a href="#">Full Time</a></div>
+                    <div class="sec4-job-type"><a href="#">${element['job-type']}</a></div>
                 </div>
             </div>
         `;
     });
+    sec4Container.addEventListener('click', function(event) {
+        const sec4Box = event.target.closest('.sec4-box');
+        
+        if (sec4Box && !event.target.closest('.sec4-favorites')) {
+            const index = Array.from(sec4Container.children).indexOf(sec4Box);
+            const jobId = filteredData[index].id;
+            
+            window.location.href = `details.html?id=${jobId}`;
+        }
+    });
+    
 }
 
 function handlePaginationClick(event) {

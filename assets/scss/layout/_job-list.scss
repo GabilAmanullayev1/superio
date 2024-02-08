@@ -242,26 +242,74 @@
 }
 
 #job-list {
+    .banner-filter {
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 10px 30px 10px;
+        border-radius: 20px;
+        width: 100%;
+
+        .banner-search-container {
+            display: flex;
+            align-items: center;
+            width: 70%;
+
+            #job-search {
+                @include banner-padding;
+                // border-right: 1px solid #e8e9eb;
+                font-size: 16px;
+                width: 100%;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            i {
+                color: $grey;
+                font-size: 20px
+            }
+        }
+
+        .banner-select-container {
+            display: flex;
+            align-items: center;
+
+            i {
+                color: $grey;
+                margin-left: 10px;
+                font-size: 20px
+            }
+
+        }
+    }
+
     .job-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         justify-content: center;
         gap: 20px;
-        .card{
+
+        .card {
             border-radius: 8px;
             padding: 30px;
             display: flex;
             border: 1px solid $border1;
             background-color: $white;
+
             .job-image {
                 max-width: 100%;
+
                 img {
                     min-width: 50px;
                     max-width: 50%;
                     height: auto;
                 }
             }
+
             .joblist-box-text {
                 .joblist-text-p {
                     display: flex;
@@ -289,18 +337,19 @@
 
                 .joblist-job-type {
                     margin: 15px 0 0;
-                    a{
+
+                    a {
                         text-decoration: none;
                         font-size: 14px;
                         padding: 4px 15px;
                         background-color: rgba(25, 103, 210, 0.15);
-                        color:$blue;
+                        color: $blue;
                         border-radius: 15px;
                     }
                 }
             }
-           
-        }   
+
+        }
     }
 }
 

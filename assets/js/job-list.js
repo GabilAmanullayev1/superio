@@ -49,7 +49,7 @@ function renderJobList() {
             <div class="card">
                 <div class="job-image"><img src="${element.jobImage}" alt=""></div>
                 <div class="joblist-box-text">
-                <div class="joblist-text-a"><a href="#">${element.job}</a></div>
+                <div class="joblist-text-a"><a  href="details.html?id=${element.id}">${element.job}</a></div>
                 <div class="joblist-text-p">
                     <div class="joblist-text-p1"><i class="fa-solid fa-briefcase"></i>
                     ${element.category}</div>
@@ -58,7 +58,7 @@ function renderJobList() {
                     <div class="joblist-text-p3"><i class="fa-solid fa-money-bill"></i>
                     ${element.salary}</div>
                 </div>
-                <div class="joblist-job-type"><a href="#">Full Time</a></div>
+                <div class="joblist-job-type"><a href="#">${element['job-type']}</a></div>
             </div> 
             </div>
         `;
@@ -66,6 +66,7 @@ function renderJobList() {
 }
 
 getDataJson2();
+
 
 search.addEventListener("input", () => {
     applyFilterAndSort();
@@ -136,7 +137,7 @@ function renderJobList() {
             <div class="card">
             <div class="job-image"><img src="${element.jobImage}" alt=""></div>
             <div class="joblist-box-text">
-            <div class="joblist-text-a"><a href="#">${element.job}</a></div>
+            <div class="joblist-text-a"><a  href="details.html?id=${element.id}">${element.job}</a></div>
             <div class="joblist-text-p">
                 <div class="joblist-text-p1"><i class="fa-solid fa-briefcase"></i>
                 ${element.category}</div>
@@ -145,11 +146,19 @@ function renderJobList() {
                 <div class="joblist-text-p3"><i class="fa-solid fa-money-bill"></i>
                 ${element.salary}</div>
             </div>
-            <div class="joblist-job-type"><a href="#">Full Time</a></div>
+            <div class="joblist-job-type"><a href="#">${element['job-type']}</a></div>
             </div>
         `;
     });
+
+    const cardElements = document.querySelectorAll('.card');
+    cardElements.forEach((cardElement, index) => {
+        cardElement.addEventListener('click', function () {
+            window.location.href = `details.html?id=${filteredArr[index].id}`;
+        });
+    });
 }
+
 
 const joblistSelect = document.getElementById("joblist-select");
 joblistSelect.addEventListener('change', () => {
