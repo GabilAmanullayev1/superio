@@ -676,9 +676,6 @@ nav .navbar .nav-menu {
 }
 
 #nav2 {
-  position: absolute;
-  z-index: 10;
-  width: 100%;
   background-color: #ffffff;
 }
 #nav2 .navbar {
@@ -993,33 +990,26 @@ nav .navbar .nav-menu {
 }
 
 #details {
-  background-color: #f5f7f8;
+  background-color: #f4f7fc;
   padding-top: 100px;
   padding-bottom: 100px;
 }
 #details .details {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 #details .details .details-left .card {
   border-radius: 8px;
   width: 100%;
-  padding: 30px;
   display: flex;
-  align-items: center;
 }
 #details .details .details-left .card .job-image {
   max-width: 100%;
 }
 #details .details .details-left .card .job-image img {
-  border-radius: 50%;
   min-width: 50px;
   max-width: 80%;
   height: auto;
-}
-#details .details .details-left .card .details-box-text {
-  margin-top: 10px;
 }
 #details .details .details-left .card .details-box-text .details-text-h2 {
   font-size: 22px;
@@ -1027,7 +1017,7 @@ nav .navbar .nav-menu {
   color: #202124;
 }
 #details .details .details-left .card .details-box-text .details-description {
-  margin-top: 5px;
+  margin-top: 10px;
   color: #696969;
 }
 #details .details .details-left .card .details-box-text .details-description a {
@@ -1036,7 +1026,7 @@ nav .navbar .nav-menu {
 }
 #details .details .details-left .card .details-box-text .details-job-type {
   display: flex;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 #details .details .details-left .card .details-box-text .details-job-type p {
   margin-right: 20px;
@@ -1048,12 +1038,10 @@ nav .navbar .nav-menu {
   border: 1px solid #ECEDF2;
 }
 #details .details .details-right .details-apply {
-  padding: 5px 10px;
-  border-radius: 10px;
-  border: 1px solid white;
-  font-size: 15px;
+  padding: 10px 50px;
   cursor: pointer;
-  margin-left: 10px;
+  border-radius: 5px;
+  border: none;
   background-color: #f9ab00;
   transition: all 0.5s ease;
   color: #ffffff;
@@ -1062,4 +1050,74 @@ nav .navbar .nav-menu {
   background-color: transparent;
   border: 1px solid #f9ab00;
   color: #f9ab00;
+}
+
+#detailsInfo {
+  padding-top: 50px;
+}
+#detailsInfo .detailsInfo {
+  display: flex;
+  gap: 30px;
+}
+#detailsInfo .detailsInfo .description {
+  max-width: 70%;
+}
+#detailsInfo .detailsInfo .description h2 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #202124;
+  margin-bottom: 10px;
+}
+#detailsInfo .detailsInfo .description p {
+  color: #696969;
+  line-height: 1.8;
+}
+#detailsInfo .detailsInfo .overview {
+  background-color: #f4f7fc;
+  padding: 20px;
+  border-radius: 5px;
+}
+#detailsInfo .detailsInfo .overview h2 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #202124;
+  margin-bottom: 10px;
+}
+#detailsInfo .detailsInfo ul {
+  flex-direction: column;
+}
+#detailsInfo .detailsInfo ul li {
+  color: #202124;
+  padding-bottom: 20px;
+}
+#detailsInfo .detailsInfo ul li i {
+  margin-right: 5px;
+  color: #696969;
+}
+#detailsInfo .desc-share {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#detailsInfo .desc-share h2 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #202124;
+  margin-bottom: 10px;
+}
+#detailsInfo .desc-share a {
+  padding: 6px 40px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #ffffff;
+  border: none;
+}
+#detailsInfo .desc-share a:nth-child(2) {
+  background-color: #1967D2;
+}
+#detailsInfo .desc-share a:nth-child(3) {
+  background-color: #D93025; /* Change the color for the second anchor */
+}
+#detailsInfo .desc-share a:nth-child(4) {
+  background-color: #BC91E8;
 }/*# sourceMappingURL=style.css.map */

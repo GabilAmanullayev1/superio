@@ -12,6 +12,7 @@
             "job-type": "Internship",
             "salary": "$1200 / month ",
             "experience": "2 years",
+            "gender":"Male",
             "description":"Join our team as a Web Developer and embark on an exciting journey of crafting web solutions that push the boundaries of technology. Whether you're an experienced developer or a fresh graduate with a passion for coding, this internship provides the perfect opportunity to learn and contribute to real-world projects. Apply now to be part of our innovative and collaborative development environment."
           },
           {
@@ -26,6 +27,7 @@
             "job-type": "Remote",
             "salary": "$1370 / month",
             "experience": "3 years",
+            "gender":"Both",
             "description":"Join our team as a Web Developer and embark on an exciting journey of crafting web solutions that push the boundaries of technology. Whether you're an experienced developer or a fresh graduate with a passion for coding, this internship provides the perfect opportunity to learn and contribute to real-world projects. Apply now to be part of our innovative and collaborative development environment."
           },
           {
@@ -40,6 +42,7 @@
             "job-type": "Full-time",
             "salary": "$2500 / month",
             "experience": "5 years",
+            "gender":"Both",
             "description":"As a Software Engineer at TechCo, you'll be at the forefront of cutting-edge technology, working on full-time projects that span various industries. Your role involves designing, developing, and maintaining high-quality software solutions. If you're looking for a dynamic work environment that values creativity and expertise, apply today and be a key player in our mission to create impactful software solutions."
           },
           {
@@ -54,6 +57,7 @@
             "job-type": "Part-time",
             "salary": "$1225 / month",
             "experience": "2 years",
+            "gender":"Male",
             "description":"Unleash your creativity as a Graphic Designer with Astronomer. We are seeking a talented individual to join our design team and bring fresh perspectives to our projects. This part-time position offers the flexibility to balance work and personal commitments while contributing to visually stunning designs. Apply now to be part of a team that values innovation, originality, and a passion for design."
           },
           {
@@ -68,6 +72,7 @@
             "job-type": "Full-time",
             "salary": "$2700 / month",
             "experience": "4 years",
+            "gender":"Male",
             "description":"Figma is seeking a highly skilled and innovative Mobile App Developer to join our dynamic Development team. Based in the vibrant city of Los Angeles, you will play a pivotal role in crafting cutting-edge mobile applications that redefine user experiences. As a key contributor, you'll work on challenging projects that involve the development of intuitive and feature-rich mobile apps. If you have a passion for mobile technology, a strong background in app development, and a desire to push the boundaries of what's possible, apply now to be part of our forward-thinking team at Figma. Your expertise will contribute to the creation of next-level mobile experiences for our users."
           },
           {
@@ -82,6 +87,7 @@
             "job-type": "Remote",
             "salary": "$3400 / month",
             "experience": "6 years",
+            "gender":"Male",
             "description":"As a Data Sientist at Employer, you'll be at the forefront of cutting-edge technology, working on full-time projects that span various industries. Your role involves designing, developing, and maintaining high-quality software solutions. If you're looking for a dynamic work environment that values creativity and expertise, apply today and be a key player in our mission to create impactful software solutions."
           },
           {
@@ -96,6 +102,7 @@
             "job-type": "Full-time",
             "salary": "$6500 / month",
             "experience": "3 years",
+            "gender":"Male",
             "description":"Join Stripe as a Digital Marketing Specialist in our London office and take charge of impactful marketing campaigns. Your role involves developing and executing strategies to enhance our online presence. If you're a marketing enthusiast with a keen eye for digital trends, this full-time position provides an opportunity to shape the marketing landscape. Apply now and be part of our dynamic marketing team."
           },
           {
@@ -110,6 +117,7 @@
             "job-type": "Full-time",
             "salary": "$5000 / month",
             "experience": "2 years",
+            "gender":"Male",
             "description":"Join Upwork as a Technical Support Engineer in our Miami office, where you'll be a vital part of our customer support team."
           },
           {
@@ -124,6 +132,7 @@
             "job-type": "Part-time",
             "salary": "$700 / month",
             "experience": "4 years",
+            "gender":"Both",
             "description":"Upwork is currently hiring for the position of Financial Analyst based in Paris. As a part-time role, you will be responsible for analyzing financial data, preparing reports, and providing valuable insights to support strategic decision-making."
           },
           {
@@ -138,6 +147,7 @@
             "job-type": "Full-time",
             "salary": "$850 / month",
             "experience": "5 years",
+            "gender":"Female",
             "description":"HealthTech is on the lookout for dedicated healthcare professionals to join as Senior/Staff Nurses in our New York facility. This full-time position offers a chance to make a difference in patient care. If you have five years of nursing experience and are passionate about providing quality healthcare, apply now to become an integral part of our committed healthcare team."
           },
           {
@@ -152,6 +162,7 @@
             "job-type": "Part-time",
             "salary": "$700 / month",
             "experience": "3 years",
+            "gender":"Female",
             "description":"Medium is looking for a talented Graphic Designer to join our team in Miami. This part-time role offers an exciting opportunity to showcase your creative skills and contribute to the visual aesthetics of our projects. "
           },
           {
@@ -166,6 +177,7 @@
             "job-type": "Part-time",
             "salary": "$600 / month",
             "experience": "2 years",
+            "gender":"Male",
             "description":"Upwork is seeking a Product Manager to join our team in Paris"
           },
           {
@@ -180,6 +192,7 @@
             "job-type": "Full-time",
             "salary": "$2250 / month",
             "experience": "4 years",
+            "gender":"Female",
             "description":"Stripe is hiring a Product Manager for our London office. This full-time role involves overseeing financial products and services"
           },
           {
@@ -194,6 +207,7 @@
             "job-type": "Temporary",
             "salary": "$4550 / month",
             "experience": "2 years",
+            "gender":"Female",
             "description":"Astronomer is currently looking for an Event Coordinator based in Los Angeles. This temporary position offers an exciting opportunity to organize and execute events that align with Astronomer's brand and mission. If you have experience in event coordination and a passion for creating memorable experiences, apply now to be part of our team and contribute to the success of our events."
           },
           {
@@ -208,6 +222,7 @@
             "job-type": "Remote",
             "salary": "$900/ month",
             "experience": "1 years",
+            "gender":"Both",
             "description":"TechCo is seeking an Assistant to join our marketing team in Los Angeles. This remote role involves providing administrative support to ensure the smooth operation of marketing initiatives. If you have strong organizational skills and a keen interest in marketing, apply now to be a valuable member of our team and contribute to the success of TechCo's marketing efforts."
           },
           {
@@ -222,6 +237,7 @@
             "job-type": "Full-time",
             "salary": "$8000 / month",
             "experience": "3 years",
+            "gender":"Male",
             "description":"Employer is offering an exciting Internship for a Game Developer in London. This position provides an excellent opportunity for those interested in game development to gain hands-on experience. If you have a passion for gaming and want to kickstart your career in the industry, apply now to be part of our innovative team and contribute to the development of engaging games."
           },
           {
@@ -236,6 +252,7 @@
             "job-type": "Internship",
             "salary": "$1200 / month ",
             "experience": "2 years",
+            "gender":"Male",
             "description":"Employer is offering an exciting Internship for a Game Developer in London. This position provides an excellent opportunity for those interested in game development to gain hands-on experience. If you have a passion for gaming and want to kickstart your career in the industry, apply now to be part of our innovative team and contribute to the development of engaging games. "
           }, 
           {
@@ -250,6 +267,7 @@
             "job-type": "Full-time",
             "salary": "$2550 / month",
             "experience": "4 years",
+            "gender":"Both",
             "description":"Stripe is hiring a Senior Solution Manager for our London office. This full-time position involves managing and implementing financial solutions for our clients. As a Senior Solution Manager at Stripe, you will play a crucial role in providing strategic solutions to meet client needs."
           },
           {
@@ -264,6 +282,7 @@
             "job-type": "Part-time",
             "salary": "$600 / month",
             "experience": "2 years",
+            "gender":"Male",
             "description":"Upwork is currently seeking an Assistant for a part-time position based in Paris. This role involves providing support to our development team and assisting in various tasks. If you have an interest in development and are looking for a part-time opportunity to gain experience, apply now to be part of our collaborative team and contribute to the success of Upwork's development projects."
           },
           {
@@ -278,6 +297,7 @@
             "job-type": "Part-time",
             "salary": "$900 / month",
             "experience": "2 years",
+            "gender":"Both",
             "description":"Upwork is looking for a Web Developer to join our team in Paris. This part-time role offers an exciting opportunity for experienced developers looking for flexible work arrangements. If you have expertise in web development and are interested in a part-time position, apply now to contribute your skills to Upwork's development projects."
           }
 
