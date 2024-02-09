@@ -104,6 +104,36 @@
             </div>
         </div>
     </section>
+    <!-- Modal -->
+    <!-- Updated Modal -->
+<!-- Updated Modal -->
+<div id="applyModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form id="applyForm">
+        <label for="cv">Upload CV:</label>
+        <input type="file" id="cv" name="cv" accept=".pdf, .doc, .docx">
+  
+        <label for="coverLetter">Cover Letter:</label>
+        <textarea id="coverLetter" name="coverLetter" rows="4" cols="50"></textarea>
+  
+        <label for="gmail">Gmail Address:</label>
+        <input type="email" id="gmail" name="gmail" required placeholder="Your Gmail address">
+  
+        <label for="acceptTerms">
+          <input type="checkbox" id="acceptTerms" name="acceptTerms" required> 
+          I accept the Terms and Conditions and Privacy Policy
+        </label>
+  
+        <button type="submit">Send Application</button>
+      </form>
+      
+      <p id="submissionMessage" style="display: none;">Application sent successfully!</p>
+    </div>
+  </div>
+  
+  
+
     <section id="detailsInfo">
         <div class="container">
             <div class="detailsInfo">
@@ -117,9 +147,11 @@
             <div class="desc-share">
                 <h2>Share this post</h2>
                 <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://pinterest.com/pin/create/button/?url=YOUR_POST_URL" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
-                <a href="https://www.linkedin.com/shareArticle?mini=true&url=YOUR_POST_URL" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                
+                <a href="https://pinterest.com/pin/create/button/?url=YOUR_POST_URL" target="_blank"><i
+                        class="fa-brands fa-pinterest"></i></a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=YOUR_POST_URL" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+
             </div>
         </div>
     </section>

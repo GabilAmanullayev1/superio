@@ -18,6 +18,43 @@ function hideMenuContainer() {
 
 navMenu.addEventListener('click', showMenuContainer);
 popupClose.addEventListener('click', hideMenuContainer);
+// ... your existing code
+
+let applyButton = document.querySelector('.details-apply');
+let modal = document.getElementById('applyModal');
+let closeButton = document.getElementsByClassName('close')[0];
+let applyForm = document.getElementById('applyForm');
+
+applyButton.addEventListener('click', function() {
+  modal.style.display = 'block';
+});
+
+closeButton.addEventListener('click', function() {
+  modal.style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
+// ... your existing code ...
+
+let submitButton = document.getElementById('submitButton');
+let submissionMessage = document.getElementById('submissionMessage');
+
+applyForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  // Mocking submission for demonstration purposes
+  // You should replace this with your actual form submission logic
+  setTimeout(() => {
+    // Show submission message
+    submissionMessage.style.display = 'block';
+  }, 1000);
+});
+
 let detailsLeft = document.querySelector('.details-left')
 let detailsDesc = document.querySelector('.description')
 let overview = document.querySelector('.overview')
