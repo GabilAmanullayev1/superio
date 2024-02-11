@@ -171,4 +171,3 @@ joblistSearch.addEventListener("input", () => {
     applyFilterAndSort();
     renderJobList();
 });
-
