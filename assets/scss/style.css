@@ -1163,7 +1163,7 @@ nav .navbar .nav-menu {
   color: white;
   padding: 10px 15px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
 }
 #applyModal.modal .modal-content form #acceptTerms {
